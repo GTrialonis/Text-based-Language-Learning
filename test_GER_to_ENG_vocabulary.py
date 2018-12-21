@@ -33,7 +33,7 @@ with open('English_Deutsch_WB.txt', encoding = "UTF-8") as file:
             print('-----------------------------------------------')
      
         else:
-##            perc_success = round((coransw/test_question)*100,2) # How does this affect the score?
+            perc_success = round((coransw/test_question)*100,2) # How does this affect the score?
             color.write('The correct answer ', "COMMENT")
             print(corword)
             print('Success rate: ', perc_success)
