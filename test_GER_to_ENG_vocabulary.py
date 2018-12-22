@@ -13,7 +13,8 @@ with open('English_Deutsch_WB.txt', encoding = "UTF-8") as file:
     
     cont = file.readlines() # reads the contents of the file
     lgth_file = len(cont) # finds the length in lines of the file
-    while repeat <= lgth_file:
+    
+    while repeat <= 49: # set to ask 50 questions
         num = random.randint(0, lgth_file-1) # obtain a random number in
                             # in the range of the length of the file length
         chunk = cont[num] # extract a line from the lines of the file
