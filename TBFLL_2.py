@@ -21,16 +21,16 @@ def openFile():
     
     if file != None:
         contents = file.read()
-        textArea1.insert('1.0', contents)
+        textArea1.insert('1.0', contents.decode('utf-8'))
         file.close()
 
 def saveasFile():
-    file = filedialog.asksaveasfile(mode='w')
+    file = filedialog.asksaveasfile(mode='wb')
 
     if file != None:
         # slice off the last character from get, as an extra return(enter) is added
         data = textArea1.get('1.0', END+'-1c')
-        file.write(data)
+        file.write(data.encode("utf-8"))
         file.close()
         
 # Root for main window
