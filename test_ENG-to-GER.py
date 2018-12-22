@@ -17,7 +17,7 @@ with open('eng-de-long.txt', encoding = "UTF-8") as file:
     lgth_file = len(cont) # finds the length in lines of the file
 
     while repeat <= 49:
-        num = random.randint(1, lgth_file) # obtain a random number in
+        num = random.randint(0, lgth_file-1) # obtain a random number in
                                # in the range of the length of the file length
         chunk = cont[num] # extract a line from the lines of the file
         indx = chunk.index('=') # find the index of the = sign inside the chunk
