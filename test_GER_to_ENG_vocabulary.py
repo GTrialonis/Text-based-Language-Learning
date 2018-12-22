@@ -9,7 +9,7 @@ test_question = 0 # tested questions to zero
 perc_success = 0 # percentage of success set to zero
 repeat = 0 # ask for one more word
 
-with open('English_Deutsch_WB.txt', encoding = "UTF-8") as file:
+with open('de-eng-long.txt', encoding = "UTF-8") as file:
     
     cont = file.readlines() # reads the contents of the file
     lgth_file = len(cont) # finds the length in lines of the file
