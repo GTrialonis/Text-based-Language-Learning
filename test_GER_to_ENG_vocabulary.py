@@ -30,14 +30,17 @@ with open('English_Deutsch_WB.txt', encoding = "UTF-8") as file:
             color.write('You are right! ', "STRING")
             print(corword)
             print('Success rate: ', perc_success, '%')
-            print('-----------------------------------------------')
+            print('-----------------------------------------------', str(repeat+1))
      
         else:
-            perc_success = round((coransw/test_question)*100,2) # How does this affect the score?
+            perc_success = round((coransw/test_question)*100,2)
             color.write('The correct answer ', "COMMENT")
             print(corword)
             print('Success rate: ', perc_success)
-            print('-----------------------------------------------')
-
+            print('-----------------------------------------------', str(repeat+1))
+            with open('scores.txt', 'a') as file:
+                file.writelines(str(perc_success))
+                file.writelines('\n')
+                
         repeat = repeat +1
     
